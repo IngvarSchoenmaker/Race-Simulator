@@ -13,6 +13,18 @@ namespace Model
         {
             Name = name;
             Sections = new LinkedList<Section>();
+            Sections = Convert(sections);
+        }
+        
+        public LinkedList<Section> Convert(SectionTypes[] section)
+        {
+            LinkedList<Section> list = new LinkedList<Section>();
+            foreach (var item in section)
+            {
+                Section newSection = new Section(item);
+                list.AddLast(newSection);
+            }
+            return list;
         }
     }
 }

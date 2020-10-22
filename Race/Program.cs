@@ -8,9 +8,9 @@ namespace Race
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             Data.Initialize();
             Console.WriteLine(Data.CurrentRace.Track.Name);
+            Visualisatie.DrawTrack(Data.CurrentRace.Track);
             for (; ; )
             {
                 Thread.Sleep(100);
